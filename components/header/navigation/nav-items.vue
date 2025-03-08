@@ -1,16 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { NAVIGATION } from '~/constants'
+</script>
 
 <template>
-  <NuxtLink class="cursor-pointer uppercase hover:text-white">
-    {{ $t('main') }}
-  </NuxtLink>
-  <NuxtLink class="cursor-pointer uppercase hover:text-white">
-    {{ $t('skills') }}
-  </NuxtLink>
-  <NuxtLink class="cursor-pointer uppercase hover:text-white">
-    {{ $t('projects') }}
-  </NuxtLink>
-  <NuxtLink class="cursor-pointer uppercase hover:text-white">
-    {{ $t('contacts') }}
+  <NuxtLink
+    v-for="item in NAVIGATION"
+    :key="item"
+    class="cursor-pointer text-text-secondary uppercase hover:text-text-main dark:text-text-main-dark dark:hover:text-white"
+  >
+    {{ $t(item) }}
   </NuxtLink>
 </template>

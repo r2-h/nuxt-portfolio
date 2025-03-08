@@ -2,9 +2,8 @@
 import { NuxtImg } from '#components'
 import VueTypewriterEffect from 'vue-typewriter-effect'
 
-const { $t, getLocale } = useI18n()
+const { $t, $getLocale } = useI18n()
 
-const locale = getLocale()
 const options = {
   detectRetina: true,
   fpsLimit: 120,
@@ -74,39 +73,29 @@ const options = {
       id="tsparticles"
       :options="options"
     />
-    <div class="z-0 flex h-full grow flex-col px-3 md:px-7">
-      <!-- <div
-        id="mobile-menu"
-        class="absolute top-0 left-0 z-10 flex w-full flex-col justify-center"
-      >
-        <nav
-          class="flex min-h-screen flex-col items-center bg-white py-8 dark:bg-black"
-          aria-label="mobile"
-        >
-          <div>asdasd</div>
-          <div>asdasd</div>
-          <div>asdasd</div>
-          <div>asdasd</div>
-        </nav>
-      </div> -->
 
+    <div class="z-0 flex h-full grow flex-col px-3 md:px-7">
       <div
         class="flex h-full grow flex-col items-center justify-center gap-y-10 md:flex-row md:justify-between md:gap-y-0"
       >
-        <div class="text-3xl font-semibold uppercase md:text-4xl">
-          <div class="flex">{{ $t('hi') }},</div>
+        <div class="text-2xl font-semibold uppercase md:text-4xl">
+          <p>{{ $t('hi') }},</p>
           <p>{{ $t('myNameIs') }}</p>
-          <p :class="`${locale === 'ru' && 'min-w-80'} text-text-accent`">
+          <div class="text-text-accent">
             {{ $t('artharexian') }}
-          </p>
+            <span class="invisible">
+              {{ $getLocale() === 'ru' ? '***' : '*' }}
+            </span>
+          </div>
           <VueTypewriterEffect
             :strings="[$t('webDeveloper')]"
             :pauseFor="2000"
           />
         </div>
+
         <NuxtImg
           src="photo.jpg"
-          class="z-0 size-70 rounded-full object-cover"
+          class="z-0 size-50 rounded-full object-cover md:size-70"
         />
       </div>
     </div>
