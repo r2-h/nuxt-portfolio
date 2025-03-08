@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Open Sans', 'sans serif';
+
+  --color-bg-main-dark: rgb(22, 22, 22);
+  --color-bg-main: rgb(245, 245, 245);
+
+  --color-text-main-dark: rgb(204, 204, 204);
+  --color-text-main: rgb(66, 68, 110);
+  --color-text-secondary-dark: rgb(167, 167, 167);
+  --color-text-secondary: rgb(100, 100, 100);
+  --color-text-accent: rgb(179, 142, 255);
+
+  --color-button-bg-dark: rgb(32, 32, 32);
+  --color-button-bg: rgb(230, 230, 230);
+}
