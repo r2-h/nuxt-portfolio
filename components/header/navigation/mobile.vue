@@ -4,7 +4,7 @@ import NavItems from './nav-items.vue'
 
 <template>
   <label
-    class="relative z-40 grid size-9 cursor-pointer overflow-hidden rounded md:hidden"
+    class="relative z-40 grid size-9 overflow-hidden rounded md:hidden"
     for="mobile-menu"
   >
     <input class="peer hidden" type="checkbox" id="mobile-menu" />
