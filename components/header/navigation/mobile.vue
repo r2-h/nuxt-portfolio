@@ -1,10 +1,24 @@
 <script setup lang="ts">
+import { NAVIGATION } from '~/constants'
 import NavItems from './nav-items.vue'
+
+const mobileMenuCheckbox = ref<HTMLInputElement | null>(null)
+
+const closeMenu = () => {
+  if (mobileMenuCheckbox.value) {
+    mobileMenuCheckbox.value.checked = false
+  }
+}
 </script>
 
 <template>
   <label class="grid overflow-hidden rounded md:hidden" for="mobile-menu">
-    <input class="peer hidden" type="checkbox" id="mobile-menu" />
+    <input
+      ref="mobileMenuCheckbox"
+      class="peer hidden"
+      type="checkbox"
+      id="mobile-menu"
+    />
 
     <div
       class="header-btn group z-20 flex cursor-pointer items-center gap-1 capitalize"
@@ -33,7 +47,7 @@ import NavItems from './nav-items.vue'
       <div
         class="grid min-h-full w-full place-content-center gap-y-8 bg-white shadow-2xl dark:bg-black"
       >
-        <NavItems />
+        <NavItems @click="closeMenu" />
       </div>
     </div>
   </label>

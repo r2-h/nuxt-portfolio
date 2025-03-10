@@ -114,6 +114,8 @@ const options = {
         </div>
 
         <NuxtLink
+          href="https://t.me/harexian"
+          target="_blank"
           class="letter z-10 mx-auto w-fit cursor-pointer rounded-2xl bg-white px-4.5 py-0.75 text-center font-medium text-text-main capitalize shadow-init hover:text-black hover:shadow-tertiary dark:bg-black dark:text-text-main-dark dark:hover:bg-black dark:hover:text-white"
         >
           {{ $t('contactMe') }}

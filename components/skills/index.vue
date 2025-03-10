@@ -34,8 +34,8 @@ import { NAVIGATION } from '~/constants'
     :id="NAVIGATION.projects"
     class="mx-auto w-full max-w-190 space-y-7 px-2 text-black md:px-5 dark:text-text-main-dark"
   >
-    <div class="h-100 w-full rounded-xl bg-gray-500"></div>
+    <div class="aspect-3/2 w-full rounded-xl bg-gray-500"></div>
 
-    <div class="h-100 w-full rounded-xl bg-gray-500"></div>
+    <div class="aspect-3/2 w-full rounded-xl bg-gray-500"></div>
   </section>
 </template>
