@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { HeaderButton, HeaderNavigation } from '#components'
+import NavItems from './navigation/nav-items.vue'
 
 const { $t, $switchLocale, $getLocale } = useI18n()
 
@@ -10,17 +11,28 @@ const switchLocale = () => {
 
 <template>
   <header
-    class="sticky top-0 z-20 mx-auto flex w-full max-w-260 items-center justify-between px-6 pt-6 md:pt-3"
+    class="sticky top-5 z-50 mx-auto flex w-full items-center justify-between px-10 text-base font-normal md:text-sm md:font-medium"
   >
-    <div class="flex gap-5">
-      <HeaderThemeToggle class="z-50" />
+    <div class="header-btn z-50 flex items-center gap-7">
+      <HeaderThemeToggle class="" />
 
-      <HeaderButton class="z-50 text-xl md:text-base" @click="switchLocale">
+      <HeaderButton class="uppercase md:normal-case " @click="switchLocale">
         {{ $t('language') }}
       </HeaderButton>
     </div>
 
-    <HeaderNavigation />
+    <nav class="header-btn hidden md:flex md:gap-7">
+      <NavItems />
+    </nav>
+
+    <nav class="header-btn hidden md:flex md:gap-7">
+      <NuxtLink
+        class="cursor-pointer hover:text-text-main dark:hover:text-white"
+      >
+        {{ $t('contacts') }}
+      </NuxtLink>
+    </nav>
+
     <HeaderNavigationMobile />
   </header>
 </template>

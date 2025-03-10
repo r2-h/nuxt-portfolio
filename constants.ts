@@ -1,1 +1,1 @@
-export const NAVIGATION = ['main', 'skills', 'projects', 'contacts'] as const
+export const NAVIGATION = ['main', 'skills', 'projects'] as const

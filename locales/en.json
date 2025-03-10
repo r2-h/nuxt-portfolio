@@ -1,5 +1,5 @@
 {
-  "language": "EN",
+  "language": "en",
   "main": "main",
   "skills": "skills",
   "projects": "projects",
@@ -7,5 +7,8 @@
   "hi": "hi",
   "myNameIs": "my name is",
   "artharexian": "artur harexian",
-  "webDeveloper": "web developer"
+  "webDeveloper": "web developer",
+  "menu": "menu",
+  "hireMe": "hire me",
+  "hiMobile":"Hi! I'm Artur Harexian"
 }

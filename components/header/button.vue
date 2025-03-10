@@ -12,7 +12,7 @@
 
 <template>
   <button
-    class="group grid size-9 place-items-center rounded bg-[--alpha(var(--color-bg-main)/80%)] text-text-secondary hover:bg-button-bg hover:text-text-main dark:bg-[--alpha(var(--color-bg-main-dark)/70%)] dark:text-text-main-dark dark:hover:bg-button-bg-dark dark:hover:text-white"
+    class="group grid cursor-pointer place-items-center hover:text-text-main dark:hover:text-white"
   >
     <slot />
   </button>

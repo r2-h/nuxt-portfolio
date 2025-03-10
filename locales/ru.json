@@ -1,5 +1,5 @@
 {
-  "language": "РУ",
+  "language": "ру",
   "main": "главная",
   "skills": "навыки",
   "projects": "проекты",
@@ -7,5 +7,8 @@
   "hi": "привет",
   "myNameIs": "меня зовут",
   "artharexian": "артур харексян",
-  "webDeveloper": "web разработчик"
+  "webDeveloper": "web разработчик",
+  "menu": "меню",
+  "hireMe": "написать",
+  "hiMobile": "Привет! Я Артур Харексян"
 }
