@@ -8,5 +8,6 @@
     <main class="flex grow flex-col">
       <slot />
     </main>
+    <Footer />
   </div>
 </template>

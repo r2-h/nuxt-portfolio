@@ -5,19 +5,21 @@
 @theme {
   --font-sans: 'Manrope', 'sans serif';
 
-  --color-bg-main-dark: rgb(25, 25, 25);
   --color-bg-main: rgb(245, 245, 245);
+  --color-bg-main-dark: rgb(27, 27, 27);
 
+  --color-text-main: rgb(33, 33, 52);
   --color-text-main-dark: rgb(204, 204, 204);
-  --color-text-main: rgb(56, 58, 94);
-  --color-text-secondary-dark: rgb(167, 167, 167);
   --color-text-secondary: rgb(100, 100, 100);
+  --color-text-secondary-dark: rgb(167, 167, 167);
   --color-text-accent: rgb(179, 142, 255);
+
+  --color-text-tertiary: rgba(89, 89, 89, 0.53);
 
   --color-button-bg-dark: rgb(32, 32, 32);
   --color-button-bg: rgb(230, 230, 230);
 
-  --shadow-init: rgba(56, 58, 94, 0.06) 0px 0px 1px 1px;
+  --shadow-init: rgba(56, 58, 94, 0.06) 0px 0px 1px 0px;
   --shadow-tertiary: rgba(0, 0, 0, 0.06) 0px 0px 18px 0px;
 }
 
@@ -30,7 +32,24 @@
   color: black;
 }
 .dark .header-btn {
-  background-color: --alpha(var(--color-bg-main-dark) / 70%);
+  background-color: --alpha(var(--color-bg-main-dark) / 80%);
   backdrop-filter: none;
   color: var(--color-text-main-dark);
+}
+
+/* smooth scroll */
+html {
+  color: rgb(43, 43, 82);
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.25rem;
+  scrollbar-gutter: stable;
+}
+html body[data-scroll-locked] {
+  overflow: visible !important;
+  margin-right: 0 !important;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

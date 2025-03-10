@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { NuxtImg, NuxtLink } from '#components'
 import VueTypewriterEffect from 'vue-typewriter-effect'
+import { NAVIGATION } from '~/constants'
 
 const { $t, $getLocale } = useI18n()
 
@@ -67,7 +68,10 @@ const options = {
 </script>
 
 <template>
-  <section class="mx-auto h-[calc(100dvh-1.68rem)] w-full max-w-200">
+  <section
+    :id="NAVIGATION.main"
+    class="mx-auto h-[calc(100dvh-1.68rem)] w-full max-w-190"
+  >
     <NuxtParticles
       class="absolute inset-0 z-10 dark:z-0"
       id="tsparticles"
@@ -75,11 +79,11 @@ const options = {
     />
 
     <div
-      class="flex h-full grow flex-col px-3 font-normal tracking-tighter md:px-7 md:font-medium"
+      class="flex h-full grow flex-col px-2 font-normal tracking-tighter md:px-5 md:font-medium"
     >
-      <div class="flex h-full grow flex-col justify-center gap-y-10 md:gap-y-0">
+      <div class="flex h-full grow flex-col justify-center gap-y-5 md:gap-y-0">
         <div
-          class="flex flex-col items-center justify-center gap-y-10 md:flex-row md:justify-between md:gap-y-0"
+          class="flex flex-col items-center justify-center gap-y-5 md:flex-row md:justify-between md:gap-y-0"
         >
           <NuxtImg
             src="photo.jpg"
@@ -94,7 +98,9 @@ const options = {
               <span v-if="$getLocale() === 'ru'" class="invisible">***</span>
             </div>
 
-            <p class="text-text-secondary/50 normal-case md:hidden">
+            <p
+              class="text-text-secondary/55 normal-case md:hidden dark:text-text-main-dark"
+            >
               {{ $t('hiMobile') }}
             </p>
             <div>
@@ -110,7 +116,7 @@ const options = {
         <NuxtLink
           class="letter z-10 mx-auto w-fit cursor-pointer rounded-2xl bg-white px-4.5 py-0.75 text-center font-medium text-text-main capitalize shadow-init hover:text-black hover:shadow-tertiary dark:bg-black dark:text-text-main-dark dark:hover:bg-black dark:hover:text-white"
         >
-          {{ $t('hireMe') }}
+          {{ $t('contactMe') }}
         </NuxtLink>
       </div>
     </div>

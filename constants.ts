@@ -1,1 +1,7 @@
-export const NAVIGATION = ['main', 'skills', 'projects'] as const
+export const NAVIGATION = {
+  main: 'main',
+  skills: 'skills',
+  projects: 'projects',
+} as const
+
+export type Navigation = keyof typeof NAVIGATION

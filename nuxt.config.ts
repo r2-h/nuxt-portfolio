@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/color-mode',
     'nuxt-i18n-micro',
+    'nuxt-aos',
   ],
   colorMode: {
     classSuffix: '',

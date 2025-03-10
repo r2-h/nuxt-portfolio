@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { HeaderButton, HeaderNavigation } from '#components'
+import { HeaderButton } from '#components'
 import NavItems from './navigation/nav-items.vue'
 
 const { $t, $switchLocale, $getLocale } = useI18n()
@@ -11,12 +11,12 @@ const switchLocale = () => {
 
 <template>
   <header
-    class="sticky top-5 z-50 mx-auto flex w-full items-center justify-between px-10 text-base font-normal md:text-sm md:font-medium"
+    class="sticky top-5 z-50 mx-auto flex w-full items-center justify-between text-base font-normal md:px-10 md:text-sm md:font-medium"
   >
     <div class="header-btn z-50 flex items-center gap-7">
       <HeaderThemeToggle class="" />
 
-      <HeaderButton class="uppercase md:normal-case " @click="switchLocale">
+      <HeaderButton class="uppercase md:normal-case" @click="switchLocale">
         {{ $t('language') }}
       </HeaderButton>
     </div>

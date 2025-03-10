@@ -6,6 +6,7 @@ import { NAVIGATION } from '~/constants'
   <NuxtLink
     v-for="item in NAVIGATION"
     :key="item"
+    :href="`#${item}`"
     class="cursor-pointer hover:text-text-main dark:hover:text-white"
   >
     {{ $t(item) }}
