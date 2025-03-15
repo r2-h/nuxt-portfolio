@@ -1,12 +1,15 @@
-@import 'tailwindcss';
+@import 'tailwindcss' theme(static);
+@import '@nuxt/ui';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-sans: 'Manrope', 'sans serif';
 
-  --color-bg-main: rgb(248, 248, 248);
+  --color-bg-main: white;
   --color-bg-main-dark: rgb(27, 27, 27);
+  --color-bg-secondary: rgb(245, 245, 245);
+  --color-bg-secondary-dark: rgb(32, 32, 32);
 
   --color-text-main: rgb(33, 33, 52);
   --color-text-main-dark: rgb(204, 204, 204);
@@ -19,7 +22,6 @@
   --color-button-bg-dark: rgb(32, 32, 32);
   --color-button-bg: rgb(230, 230, 230);
 
-  --shadow-init: rgba(56, 58, 94, 0.06) 0px 0px 1px 0px;
   --shadow-tertiary: rgba(0, 0, 0, 0.06) 0px 0px 18px 0px;
 }
 

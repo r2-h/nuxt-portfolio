@@ -70,7 +70,11 @@ const options = {
 <template>
   <section
     :id="NAVIGATION.main"
-    class="mx-auto h-[calc(100dvh-1.68rem)] w-full max-w-190"
+    class="mx-auto h-[calc(100dvh-1.68rem)] w-full max-w-160"
+    data-aos="fade-zoom-in"
+    data-aos-easing="ease-in-out"
+    data-aos-delay="200"
+    data-aos-offset="0"
   >
     <NuxtParticles
       class="absolute inset-0 z-10 dark:z-0"
@@ -83,17 +87,17 @@ const options = {
     >
       <div class="flex h-full grow flex-col justify-center gap-y-5 md:gap-y-0">
         <div
-          class="flex flex-col items-center justify-center gap-y-5 md:flex-row md:justify-between md:gap-y-0"
+          class="flex flex-col items-center justify-center gap-x-7 gap-y-5 md:flex-row md:justify-between md:gap-y-0"
         >
           <NuxtImg
             src="photo.jpg"
-            class="size-35 rounded-full object-cover opacity-90 brightness-110 grayscale-[80%] md:size-55 dark:z-0 dark:opacity-100 dark:brightness-100 dark:grayscale-0"
+            class="size-35 rounded-full object-cover opacity-90 brightness-110 grayscale-[80%] md:size-65 dark:z-0 dark:opacity-100 dark:brightness-100 dark:grayscale-0"
           />
 
           <div class="text-center text-2xl uppercase md:text-left md:text-4xl">
             <p class="hidden md:block">{{ $t('hi') }},</p>
             <p class="hidden md:block">{{ $t('myNameIs') }}</p>
-            <div class="hidden text-text-accent md:block">
+            <div class="hidden text-nowrap text-text-accent md:block">
               {{ $t('artharexian') }}
               <span v-if="$getLocale() === 'ru'" class="invisible">***</span>
             </div>
@@ -116,7 +120,7 @@ const options = {
         <NuxtLink
           href="https://t.me/harexian"
           target="_blank"
-          class="letter z-10 mx-auto w-fit cursor-pointer rounded-2xl bg-white px-4.5 py-0.75 text-center font-medium text-text-main capitalize shadow-init hover:text-black hover:shadow-tertiary dark:bg-black dark:text-text-main-dark dark:hover:bg-black dark:hover:text-white"
+          class="letter z-10 mx-auto w-fit cursor-pointer rounded-2xl bg-white px-4.5 py-0.75 text-center font-medium text-text-main capitalize shadow-tertiary hover:text-black dark:bg-black dark:text-text-main-dark dark:hover:bg-black dark:hover:text-white"
         >
           {{ $t('contactMe') }}
         </NuxtLink>
